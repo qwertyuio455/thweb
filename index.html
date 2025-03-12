@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khảo Sát</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+          <div class="row">
+                <h4>Thông tin cá nhân</h4>
+                <div class="input-group input-group-icon">
+                    <input type="text" id="fullName" placeholder="Họ và tên"/>
+                    <div class="input-icon"><i class="fa fa-user" aria-hidden="true"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" id="cccd" placeholder="Căn cước công dân"/>
+                    <div class="input-icon"><i class="fa fa-id-card" aria-hidden="true"></i></div>
+                </div>
+                <div class="input-group input-group-icon">
+                    <input type="text" id="address" placeholder="Địa chỉ thường trú"/>
+                    <div class="input-icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                </div>
+      </div>
+          <div class="row">
+            <div class="col-half" id="dob">
+              <h4>Date of Birth</h4>
+              <div class="input-group">
+                <div class="col-third">
+                  <input type="number" placeholder="DD"/>
+                </div>
+                <div class="col-third">
+                  <input type="number" placeholder="MM"/>
+                </div>
+                <div class="col-third">
+                  <input type="number" placeholder="YYYY"/>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <button type="button" onclick="showSurvey()"">Hoàn thành</button>
+            <p style="font-style: italic;">Bấm hoàn thành để bắt đầu khảo sát!</p>
+          </div>
+          <div class="survey-container" id="surveyContainer" style="display: none;"> 
+            <h2>Bài Khảo Sát</h2>
+            <form id="surveyForm" onsubmit="submitSurvey(event)">
+              <div id="questions"></div>
+              <button type="submit">Nộp Bài</button>
+            </form>         
+          </div>
+      </div>
+    
+    <div id="result" style="display: none;"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
